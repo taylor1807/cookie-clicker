@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://eu-central.storage.cloudconvert.com/tasks/1ef2e9f0-23ca-4d3c-be76-0ed3cf4f7b15/pexels-victorino-2286776.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240831%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20240831T133115Z&X-Amz-Expires=86400&X-Amz-Signature=efcb5cc6e6bcb46cb41150e4590439ac9abbb9a1dc223f1e4f228add5a4cdd7b&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22pexels-victorino-2286776.webp%22&response-content-type=image%2Fwebp&x-id=GetObject

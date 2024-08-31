@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://eu-central.storage.cloudconvert.com/tasks/75c9ccd7-c6d2-4def-b8ba-7adc3de0a8db/potato.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240830%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20240830T133407Z&X-Amz-Expires=86400&X-Amz-Signature=74e91fbc39c4581194d93c9ffd7d49f778f79f54b374cc63524886946701aa0f&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22potato.webp%22&response-content-type=image%2Fwebp&x-id=GetObject

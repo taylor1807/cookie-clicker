@@ -1,0 +1,155 @@
+body {
+  display: flex;
+  margin: 0;
+  padding: 10px;
+  background-image: url(./assets/potatoBackground.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+#cookieSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 250px;
+}
+#cookie {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  border-radius: 250px;
+  box-shadow: 0 0 10px rgba(247, 91, 91, 0.1);
+  cursor: pointer;
+  animation: bounce 1s infinite;
+  margin: 50px;
+  transition: transform 0.2s;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#cookie.clicked {
+  animation: spin 1s forwards;
+}
+#mainCounterDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+#shop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-left: 20px;
+  padding: 8px;
+  background-color: #f33232;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+}
+.shopUpgrades {
+  border: 2px solid #333;
+  padding: 4px;
+  margin: 8px 0;
+  border-radius: 8px;
+  background-color: #dfc908;
+  text-align: center;
+}
+#optionsMenu {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 20px;
+  background-color: #dfc908;
+  border: 1px solid #ff3300;
+  box-shadow: 0 0 10px rgba(107, 106, 106, 0.1);
+  font-family: cursive;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+h3 {
+  font-family: cursive;
+  font-size: 20px;
+  font-weight: 100;
+  margin: 0;
+  text-shadow: 1px 1px 2px pink;
+}
+h2 {
+  font-size: 92px;
+  font-family: cursive;
+  font-weight: 100;
+  text-shadow: 5px 5px 10px pink;
+}
+h1 {
+  rotate: -45deg;
+  text-shadow: 5px 5px #558abb;
+  font-size: 72px;
+  padding-left: 35px;
+  font-family: cursive;
+  font-weight: 100;
+}
+p {
+  font-family: cursive;
+  font-size: 15px;
+  font-weight: 100;
+  text-shadow: #fc0 1px 0 10px;
+}
+.counter {
+  font-size: 90px;
+}
+.heading {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  color: rgb(95, 73, 32);
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+.button {
+  font-family: cursive;
+  font-size: 20px;
+  font-weight: 200;
+  text-shadow: 5px 5px 10px black;
+  background-color: blue;
+  color: wheat;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 5px;
+  border: 2px solid white;
+  border-radius: 5px;
+  transition: transform 0.2s ease, background-color 0.3s, color 0.3s;
+}
+button:hover {
+  background-color: lightblue;
+  color: black;
+  border: 2px solid black;
+}
+.button:active {
+  transform: scale(1.1);
+}
