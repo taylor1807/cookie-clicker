@@ -197,7 +197,7 @@ p {
   }
   #optionsMenu {
     width: 80%;
-    max-width: 200px;
+    max-width: 150px;
     padding: px;
     font-size: 2vw;
     grid-column: 1 / 3;
