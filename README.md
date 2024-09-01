@@ -21,3 +21,5 @@ there is also an options menu to enable/disable sound and also reset your progre
 Thank you to [Cookie Upgrade API](https://cookie-upgrade-api.vercel.app/) for providing upgrade data.And w3schools/mdn/stackoverflow for guides on how to add soundeffects, create an options box, modify the upgrade cost after each purchase, and adding animations.
 
 overall this project has been a fun experience, i hope you enjoy it too.
+
+i installed vitest with the intention of testing features but throughout the project i ended up using console log and the other dev tools to fix problems
