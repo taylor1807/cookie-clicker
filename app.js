@@ -14,19 +14,24 @@ const upgradeSound = document.getElementById("upgradeSound");
 function load() {
   const savedCookieCount = localStorage.getItem("cookieCount");
   const savedCookiesPerSecond = localStorage.getItem("cookiesPerSecond");
+  const savedSoundEnabled = localStorage.getItem("soundEnabled");
 
   if (savedCookieCount !== null) {
     cookieCount = JSON.parse(savedCookieCount);
   }
-
   if (savedCookiesPerSecond !== null) {
     cookiesPerSecond = JSON.parse(savedCookiesPerSecond);
   }
+  if (savedSoundEnabled !== null) {
+    soundEnabled = JSON.parse(savedSoundEnabled);
+  }
+  updateUI();
 }
 
 function save() {
   localStorage.setItem("cookieCount", cookieCount);
   localStorage.setItem("cookiesPerSecond", cookiesPerSecond);
+  localStorage.setItem("soundEnabled", JSON.stringify(soundEnabled));
 }
 
 load();
@@ -52,6 +57,7 @@ function update() {
   cookieCount += cookiesPerSecond;
   // console.log(cookieCount);
   updateUI();
+  save();
 }
 
 setInterval(update, 1000);
@@ -86,6 +92,8 @@ function createElements(resource) {
     if (cookieCount >= resource.cost) {
       cookieCount -= resource.cost;
       cookiesPerSecond += resource.increase;
+      resource.cost = Math.round(resource.cost * 1.25);
+      cost.textContent = `cost:${resource.cost}`;
       updateUI();
       if (soundEnabled) upgradeSound.play();
     } else {
@@ -117,14 +125,31 @@ function createOptionsMenu() {
           }>
           Sound Effects
       </label>
+      <button  class= "button" id="resetButton">Reset Progress</button>
   `;
   document.body.appendChild(menu);
 
   document
     .getElementById("toggleSound")
     .addEventListener("change", toggleSound);
+
+  document
+    .getElementById("resetButton")
+    .addEventListener("click", resetProgress);
 }
 createOptionsMenu();
+
+function resetProgress() {
+  cookieCount = 0;
+  cookiesPerSecond = 1;
+  soundEnabled = true;
+
+  localStorage.removeItem("cookieCount");
+  localStorage.removeItem("cookiesPerSecond");
+  localStorage.removeItem("soundEnabled");
+
+  updateUI();
+}
 
 function toggleSound() {
   soundEnabled = !soundEnabled;
